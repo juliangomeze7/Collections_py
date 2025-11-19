@@ -1,5 +1,9 @@
-t = eval(input("Tupla: "))
-nombre, edad, pais = t
+entrada = input("Tupla (nombre, edad, país): ")
+entrada = entrada.replace("(", "").replace(")", "")
+nombre_str, edad_str, pais_str = entrada.split(",")
+nombre = nombre_str.strip()
+edad = int(edad_str.strip())
+pais = pais_str.strip()
 print("Nombre:", nombre)
 print("Edad:", edad)
 print("País:", pais)
